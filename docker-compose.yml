@@ -5,8 +5,5 @@ services:
     ports:
       - "${DEBUG_SERVER_PORT:-8000}:8000"
     volumes:
-      - debug-data:/data
+      - ./data:/data
     restart: unless-stopped
-
-volumes:
-  debug-data:
