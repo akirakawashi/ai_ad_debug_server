@@ -1,0 +1,12 @@
+services:
+  debug-server:
+    build: .
+    env_file: .env
+    ports:
+      - "${DEBUG_SERVER_PORT:-8000}:8000"
+    volumes:
+      - debug-data:/data
+    restart: unless-stopped
+
+volumes:
+  debug-data:
